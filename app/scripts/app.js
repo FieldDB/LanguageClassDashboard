@@ -32,8 +32,7 @@ angular
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainController'
+         redirectTo: '/nemo/malayalam_field_methods'
       })
       .when('/about/contact', {
         templateUrl: 'views/main.html',
@@ -43,24 +42,9 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/welcome', {
-        redirectTo: '/bienvenu'
-      })
       .when('/bienvenu', {
         templateUrl: 'views/signup.html',
         controller: 'AboutCtrl'
-      })
-      .when('/:team/:corpusid/nouveau/classe', {
-        redirectTo: '/:team/:corpusid/import/participants'
-      })
-      .when('/:team/:corpusid/rapports/classe', {
-        redirectTo: '/:team/:corpusid/reports/participants'
-      })
-      .when('/:team/:corpusid/gerer/test-block', {
-        redirectTo: '/:team/:corpusid/datalists'
-      })
-      .when('/:team/:corpusid/gerer/stimuli', {
-        redirectTo: '/:team/:corpusid/data'
       });
 
     if (FieldDB && FieldDB.Router) {
